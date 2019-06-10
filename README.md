@@ -9,7 +9,7 @@
 - Run "npm start"
 
 ## How it works
-- I'm using a simple "Express" server to store tha API key and take care of the API calls. From the client I'm communicating with the "giphy" API
+- I'm using a simple "Express" server to store the API key and take care of the API calls. From the client I'm communicating with the "giphy" API
 only through the "Express" server
 
 - All containers that will need to render data from the API are wrapped in a "ErrorBoundary" container which will catch any errors from its the entire
