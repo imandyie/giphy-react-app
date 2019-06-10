@@ -1,0 +1,35 @@
+@import '../mixins/responsive.scss';
+@import '../colors.scss';
+
+.home-container {
+  background-color: $blue;
+  padding: 20px;
+  min-height: calc(100% - 40px);
+
+  .gifs-list-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 100px;
+
+    .gifs-filter {
+      margin-bottom: 30px;
+
+      button {
+        margin-right: 10px;
+      }
+    }
+
+    & > div {
+      display: flex;
+      flex-flow: wrap;
+
+      &.pagination {
+        flex: 1;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0px;
+      }
+    }
+  }
+}

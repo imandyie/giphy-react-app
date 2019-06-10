@@ -1,0 +1,21 @@
+@import '../mixins/responsive.scss';
+@import '../colors.scss';
+
+.details-container {
+  min-height: 100%;
+  background-color: $gray;
+
+  .error-boundary {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top: 150px;
+  }
+}
+
+/** Responsive **/
+@include responsive(sm) {
+  .details-container {
+    background-color: $white;
+  }
+}

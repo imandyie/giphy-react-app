@@ -1,0 +1,71 @@
+@import '../mixins/responsive.scss';
+@import '../colors.scss';
+
+.gifs-list-container {
+  margin-bottom: 30px;
+  flex: 0 0 25%;
+  display: inherit;
+  position: relative;
+
+  .gif-image {
+    margin-right: 20px;
+    background: $lightGray;
+    border: 2px solid $lightGray;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    padding: 2px;
+    cursor: pointer
+  }
+
+  .gif-details-overlay {
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    left: 4px;
+    bottom: 9px;
+    height: 40px;
+    overflow: hidden;
+    height: 0px;
+    -webkit-transition: height 0.2s ease-in-out;
+    -moz-transition: height 0.2s ease-in-out;
+    -o-transition: height 0.2s ease-in-out;
+    transition: height 0.2s ease-in-out;
+
+    & > div {
+      color: $white;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 10px;
+    }
+  }
+
+  &:hover {
+    .gif-details-overlay {
+      height: 40px;
+    }
+  }
+}
+
+/** Responsive **/
+@include responsive(sm) {
+  .gifs-list-container {
+  	display: block;
+    padding-bottom: 30px;
+
+    .gif-image {
+      width: 100% !important;
+    }
+
+    &:hover {
+      .gif-details-overlay {
+        height: auto !important;
+      }
+    }
+
+    .gif-details-overlay {
+      & > div {
+        font-size: 18px;
+      }
+    }
+  }
+}

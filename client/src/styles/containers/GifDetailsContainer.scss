@@ -1,0 +1,131 @@
+@import '../mixins/responsive.scss';
+@import '../colors.scss';
+
+.details-cover {
+  width: 100%;
+  height: 400px;
+  background-color: $blue;
+}
+
+.gif-details {
+  background: $white;
+  border: 1px solid $gray;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 400px;
+  margin-top: -60px;
+  z-index: 99;
+  position: relative;
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+
+    & > div {
+      flex: 1;
+      padding-left: 20px;
+    }
+  }
+
+  .gif-details-content {
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+    &:not(.animated-content-placeholder) {
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+  }
+
+  .upload-date {
+    margin-top: 10px;
+    display: block;
+
+    svg {
+      width: 20px;
+      position: relative;
+      margin-right: 5px;
+      top: 4px;
+    }
+  }
+
+  .go-back-btn {
+    margin-top: 30px;
+  }
+}
+
+@keyframes datePlaceholder {
+  0% {
+    background-position: -370px 0
+  }
+  100% {
+    background-position: 370px 0
+  }
+}
+
+.animated-date-placeholder {
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: datePlaceholder;
+  animation-timing-function: linear;
+  background: $white;
+  background: linear-gradient(to right, $darkerGray 8%, $darkGray 18%, $darkerGray 33%);
+  background-size: 800px 104px;
+  position: relative;
+  max-width: 200px;
+  color: transparent !important;
+
+  b {
+    color: transparent !important;
+  }
+
+  svg {
+    display: none;
+  }
+}
+
+/** Responsive **/
+@include responsive(sm) {
+  .details-cover {
+    height: 250px;
+  }
+
+  .gif-details {
+    margin-top: 0px;
+    border: none;
+    min-height: 200px;
+
+    & > div {
+      display: block;
+      img,
+      .animated-image-placeholder {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 250px !important;
+        height: auto !important;
+      }
+
+      & > div {
+        padding-left: 0px;
+      }
+    }
+  }
+
+  .gifs-list-container {
+    flex: 0 0 100%;
+
+    img {
+      height: auto !important;
+    }
+
+    .gif-details-overlay {
+      height: auto;
+      background: transparent;
+
+      div {
+        padding: 0px;
+      }
+    }
+  }
+}

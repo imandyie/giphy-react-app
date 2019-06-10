@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders without errors 1`] = `
+<button
+  className="button primary-button  "
+  onClick={[Function]}
+  style={
+    Object {
+      "borderColor": "red",
+      "color": "blue",
+    }
+  }
+>
+  Sample Button
+</button>
+`;

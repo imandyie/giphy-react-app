@@ -1,0 +1,42 @@
+@import '../colors.scss';
+
+.button {
+  background-color: transparent;
+  padding: 10px 20px;
+  outline: 0;
+  cursor: pointer;
+  font-size: 0.8rem;
+
+  &.primary-button {
+    border: 1px solid;
+    border-radius: 20px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+@keyframes buttonPlaceholder {
+  0% {
+    background-position: -1200px 0
+  }
+  100% {
+    background-position: 1200px 0
+  }
+}
+
+.animated-button-placeholder {
+  animation-duration: 2.1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: buttonPlaceholder;
+  animation-timing-function: linear;
+  background: $white;
+  background: linear-gradient(to right, $darkerGray 8%, $darkGray 18%, $darkerGray 33%);
+  background-size: 800px 104px;
+  border-color: $darkerGray !important;
+  color: transparent !important;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}

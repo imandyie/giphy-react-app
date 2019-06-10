@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content renders as a link and class name is set during fetching 1`] = `
+<div
+  className="content sample-class animated-content-placeholder"
+  style={
+    Object {
+      "color": "red",
+      "opacity": "1",
+    }
+  }
+>
+  <a
+    href="Sample Content"
+    target="_blank"
+  >
+    Sample Content
+  </a>
+</div>
+`;
+
+exports[`Content renders without errors 1`] = `
+<div
+  className="content sample-class "
+  style={
+    Object {
+      "color": "red",
+      "opacity": "1",
+    }
+  }
+>
+  Sample Content
+</div>
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders without errors 1`] = `
+<h1
+  className="heading animated-heading-placeholder"
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+>
+  Sample Heading
+</h1>
+`;

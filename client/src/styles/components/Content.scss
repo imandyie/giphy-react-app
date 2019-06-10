@@ -1,0 +1,32 @@
+@import '../colors.scss';
+
+.content {
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+  font-size: 0.8rem;
+}
+
+@keyframes contentPlaceholder {
+  0% {
+    background-position: -1200px 0
+  }
+  100% {
+    background-position: 1200px 0
+  }
+}
+
+.animated-content-placeholder {
+  animation-duration: 2.1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: contentPlaceholder;
+  animation-timing-function: linear;
+  background: $white;
+  background: linear-gradient(to right, $darkerGray 8%, $darkGray 18%, $darkerGray 33%);
+  background-size: 800px 104px;
+  height: 80px;
+  position: relative;
+  max-width: 1200px;
+  font-size: 0px;
+}

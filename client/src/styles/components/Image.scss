@@ -1,0 +1,35 @@
+@import '../mixins/responsive.scss';
+@import '../colors.scss';
+
+@keyframes imagePlaceholder {
+  0% {
+    background-position: -450px 0
+  }
+  100% {
+    background-position: 450px 0
+  }
+}
+
+.animated-image-placeholder {
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: imagePlaceholder;
+  animation-timing-function: linear;
+  background: $white;
+  background: linear-gradient(to right, $darkerGray 8%, $darkGray 18%, $darkerGray 33%);
+  background-size: 900px 104px;
+  position: relative;
+  font-size: 0px;
+  margin-right: 20px;
+  width: 350px;
+}
+
+/** Responsive **/
+@include responsive(sm) {
+  .animated-image-placeholder {
+    margin-bottom: 10px;
+    height: 300px;
+    width: 100%;
+  }
+}

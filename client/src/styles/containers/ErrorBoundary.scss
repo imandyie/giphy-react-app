@@ -1,0 +1,12 @@
+@import '../colors.scss';
+
+.error-boundary {
+  background-color: $white;
+  padding: 20px;
+  width: 100%;
+
+  .error-bundary-refresh-btn {
+    margin-top: 20px;
+    display: block;
+  }
+}
